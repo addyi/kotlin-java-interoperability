@@ -17,7 +17,7 @@ public class Main {
         System.out.println("### KOTLIN SEALED CLASS ###");
 
         var loading = UiState.Loading.INSTANCE;
-        var success = new UiState.Success("Success message");
+        var success = new UiState.Success("Success message", 1);
         var error = new UiState.Error("Error message");
 
         System.out.println(loading);
