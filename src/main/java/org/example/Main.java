@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.accessor.CalenderDemoKt;
+import org.example.accessor.Customer;
 import org.example.jinterface.JavaServiceInterface;
 import org.example.jinterface.KotlinImplForJavaInterface;
 import org.example.kinterface.JavaImplForKotlinInterface;
@@ -36,6 +38,19 @@ public class Main {
 
         var resFromDoSomethingElse = kotlinInterface.doSomething();
         System.out.println(resFromDoSomethingElse);
+
+        System.out.println("### GETTER/SETTER ###");
+
+        var customer = new Customer("John Doe");
+
+        System.out.println(customer.getName());
+        customer.setName("Jane Doe");
+        System.out.println(customer.getName());
+        customer.placeOrder();
+
+        System.out.println("### Top-level function ###");
+
+        CalenderDemoKt.calendarDemo();
 
 
     }

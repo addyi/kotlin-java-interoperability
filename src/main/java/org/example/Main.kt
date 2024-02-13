@@ -1,5 +1,7 @@
 package org.example
 
+import org.example.accessor.Customer
+import org.example.accessor.calendarDemo
 import org.example.jinterface.JavaServiceInterface
 import org.example.jinterface.KotlinImplForJavaInterface
 import org.example.kinterface.JavaImplForKotlinInterface
@@ -37,5 +39,18 @@ fun main() {
     kotlinInterface
         .doSomething()
         .also(::println)
+
+    println("### GETTER/SETTER ###")
+
+    val customer = Customer("John Doe")
+
+    println(customer.name)
+    customer.name = "Jane Doe"
+    println(customer.name)
+    customer.placeOrder()
+
+    println("### Top-level function ###")
+
+    calendarDemo()
 
 }
